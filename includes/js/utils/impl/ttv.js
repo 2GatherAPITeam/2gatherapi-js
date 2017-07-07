@@ -64,11 +64,32 @@ class SpeechUtil extends Util{
         rawFile.send(null);
     }
 
+    readText(contents) {
+        let speaker = new SpeechUtil();
+
+        let userLanguage = this.userLanguages;
+        let allText = contents
+        let chunkLength = 120;
+        let pattRegex = new RegExp('^[\\s\\S]{' + Math.floor(chunkLength / 2) + ',' + chunkLength + '}[.!?,]{1}|^[\\s\\S]{1,' + chunkLength + '}$|^[\\s\\S]{1,' + chunkLength + '} ');
+        let arr = [];
+        let txt = allText;
+        while (txt.length > 0) {
+            arr.push(txt.match(pattRegex)[0]);
+            txt = txt.substring(arr[arr.length - 1].length);
+        }
+        arr.forEach(function (element) {
+            let content = element.trim();
+            let utterance = new SpeechSynthesisUtterance(content);
+            utterance.lang = userLanguage
+            speaker.startSpeak(utterance);
+        });
+    }
+
+
     initAnnyang() {
 
         let commands = {};
         commands['stop'] = function(){
-            // speechSynthesisInstance.cancel();
             window.speechSynthesis.cancel();
             console.log("stop");
         };

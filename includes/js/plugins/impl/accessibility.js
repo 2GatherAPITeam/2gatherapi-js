@@ -116,7 +116,6 @@ class Accessibility extends Plugin{
         divHeader.appendChild(ulHeader);
 
 
-        this.ann
         var tgLButtonClose = document.createElement("tg-button");
         ulHeader.appendChild(tgLButtonClose);
         let buttonClose = {

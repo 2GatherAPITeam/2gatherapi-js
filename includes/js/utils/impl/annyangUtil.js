@@ -30,6 +30,7 @@ class AnnyangUtil extends Util{
                             {"imgScrollModalUp" : "up"},
                             {"accessibility_close" : "close accessibility"},
                             {"accessibility_open" : "open accessibility"},
+                            {"stopTTV" : "stop"},
                             {"exit" : "exit"}
                          ]
                     }

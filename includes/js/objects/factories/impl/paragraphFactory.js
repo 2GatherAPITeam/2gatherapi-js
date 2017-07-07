@@ -8,7 +8,7 @@ class ParagraphFactory extends ObjectFactory {
         if (!paragraphFactoryInstance) {
             paragraphFactoryInstance = this;
             this.annyangUtil = new AnnyangUtil();
-            this.SpeechUtils = new SpeechUtil();
+            this.speechUtil = new SpeechUtil();
         }
         return paragraphFactoryInstance;
     }
@@ -29,7 +29,7 @@ class ParagraphFactory extends ObjectFactory {
             this.options = options;
             paragraph = new Paragraph(domElement);
             paragraph.draw(this.options);
-            if(this.gatherApiObject.requiredUtills.indexOf("voice commands") != -1){
+            if(this.gatherApiObject.requiredUtills.indexOf("voice commands") != -1 || this.gatherApiObject.requiredUtills.indexOf("ttv") != -1){
                 this.initUtils();
             }
         }
@@ -44,12 +44,20 @@ class ParagraphFactory extends ObjectFactory {
     initAnnyang() {
 
         let commands = {};
+        var self = this;
         let text = this.options.commands.content;
-        let self = this.SpeechUtils;
-        commands[this.options.commands.commandTrigger] = function () {
-            self.chunkContents(text)
-        };
+
+            if (this.options.commands.commandTrigger) {
+                let dataCommand = this.options.voiceCommand;
+                commands[this.options.commands.commandTrigger] = function () {
+                    self.speechUtil.readText(text);
+                };
+            }
+
+
+
         let annyangOptions = {commands: commands};
         this.annyangUtil.addAnnyangCommands(annyangOptions);
+
     }
 }
