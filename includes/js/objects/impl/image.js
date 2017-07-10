@@ -1,6 +1,6 @@
 class Img extends TGObject {
 
-    constructor(domElement,gatherApiObject) {
+    constructor(domElement, gatherApiObject) {
         super();
         this.domElement = domElement;
         this.annyangUtil = new AnnyangUtil();
@@ -38,7 +38,7 @@ class Img extends TGObject {
         if (this.options.img) {
             this.img.setAttribute("src", this.options["img"]);
         }
-        if(this.options.path) {
+        if (this.options.path) {
 
             let path = this.options["path"];
             // When the user clicks the button, open the modal
@@ -62,7 +62,7 @@ class Img extends TGObject {
         }
         //init voice command
         let commands = {};
-        if(this.gatherApiObject.requiredUtills.indexOf("voice command") != -1){
+        if (this.gatherApiObject.requiredUtills.indexOf("voice command") != -1) {
 
             //first check if there is file path exist for voice command
             if (this.options.path) {
@@ -84,7 +84,7 @@ class Img extends TGObject {
                             modal.style.display = "none";
                         };
                     }
-                    else if(langObj[langCommand].hasOwnProperty("imgScrollModalDown")){
+                    else if (langObj[langCommand].hasOwnProperty("imgScrollModalDown")) {
                         commands[langObj[langCommand]["imgScrollModalDown"]] = function () {
                             // var modal = document.getElementsByClassName('modal-content');
                             // modal.scrollTop = 100;
@@ -100,7 +100,7 @@ class Img extends TGObject {
             }
         }
         //the user is blind
-        if(this.gatherApiObject.requiredUtills.indexOf("ttv") != -1){
+        if (this.gatherApiObject.requiredUtills.indexOf("ttv") != -1) {
             var self = this;
             let path = this.options["path"];
             if (this.options.path) {
@@ -119,19 +119,24 @@ class Img extends TGObject {
         return this.img;
     }
 
-    enableTobii(){
-        this.img.style.transform = "scale(2)"
+    enableTobii() {
+        var stories = document.getElementsByClassName("tg-library-story");
+        var i = 0;
+        for(i = 0; i < stories.length; i ++){
+            stories[i].style.transform = "scale(2)";
+            stories[i].style.margin = "13%";
+        }
         console.log("img tobi");
     }
 
-    enablejoystick(){
+    enablejoystick() {
 
     }
 
-    enableClickers(){
+    enableClickers() {
         this.img.addEventListener("focus", function () {
             this.style.backgroundColor = "red";
-            this.style.opacity= "0.7";
+            this.style.opacity = "0.7";
         });
     }
 

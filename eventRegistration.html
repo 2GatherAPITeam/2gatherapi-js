@@ -18,7 +18,8 @@
 
     <!--accessibilty tool-->
     <link rel="stylesheet" title="Normal" href="includes/styleacc.css" type="text/css" />
-
+    <script src="sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
 
     <title>Tsamid</title>
 
@@ -63,7 +64,7 @@
 <div class="form">
     <h2 style="text-align: center ; margin-bottom: 2%">הרשמה לאירועים</h2>
 
-    <form id="formEvent" class="form-horizontal" >
+    <div id="formEvent" class="form-horizontal" >
         <div class="form-group">
             <label for="name">שם: </label>
             <tg-input options="inputName"></tg-input>
@@ -84,7 +85,7 @@
             <tg-button options="buttonSend"></tg-button>
             <!--<button type="submit" class="btn btn-basic">Submit</button>-->
         </div>
-    </form>
+    </div>
 
 </div>
 
@@ -217,14 +218,12 @@
 
         window["buttonSend"] = {
             buttonAttribute: {
-                type : "submit",
-                class : "btn btn-basic"
-
+                class : "submitButton"
             },
             buttonValue: "שלח",
             onClickFunc: {
                 func: function () {
-                    alert("ההרשמה בוצע בהצלחה!")
+                    swal("מעולה!", "אירוע נרשם במערכת!", "success");
                 }
             }
         }

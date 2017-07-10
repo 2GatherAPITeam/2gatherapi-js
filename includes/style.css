@@ -428,14 +428,24 @@ img:hover{
 /*changed story class to */
 .tg-library-story{
     width: 21%;
-    height: 230px;
-    /*background: url(../images/story.jpg);*/
+    height: 40%;
     background-size: 100%;
     float: left;
     margin: 2%;
     top: 10px;
     position: relative;
     cursor: pointer;
+}
+.tobiiLibrary {
+    width: 21%;
+    height: 35%;
+    background-size: 100%;
+    float: left;
+    margin: 13%;
+    top: 22px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(2);
 }
 .tg-library-story:hover{
     background-color: rgba(158, 158, 158, 0.08);
@@ -740,11 +750,7 @@ img:hover{
 }
 #start {
     display:none;
-    width: 100px;
     float: none;
-    margin: 0px auto;
-    top: 17em;
-
 }
 #quiz p{
     font-weight: bold;
@@ -861,7 +867,7 @@ tbody td {
     direction: rtl;
     margin-top: -42px;
 }
-form button{
+form button, .submitButton{
     position: relative;
     width: 31%;
     padding: 3%;
