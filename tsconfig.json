@@ -1,28 +1,13 @@
 {
   "questions":[
     {
-      "question": "Which picture shows Shrek?",
+      "question": "באיזה תמונה מופיע שרק?",
       "choices": ["shrek", "pooh", "dog", "thing"],
       "correctAnswer": 0
     },
     {
-      "question": "Which picture shows an Owl?",
+      "question": "באיזה תמונה מופיע ינשוף?",
       "choices": ["Penguin", "Flamingo", "Owl", "Quetzal"],
-      "correctAnswer": 2
-    },
-    {
-      "question": "Which picture shows a fruit?",
-      "choices": ["Brocoli", "Carrots", "Apple", "Paprika"],
-      "correctAnswer": 2
-    },
-    {
-      "question": "Which picture shows the answer of 2+2?",
-      "choices": ["8", "4", "6", "5"],
-      "correctAnswer": 1
-    },
-    {
-      "question": "Which picture shows a Quetzal?",
-      "choices": ["8", "4", "6", "5"],
       "correctAnswer": 2
     }
   ]

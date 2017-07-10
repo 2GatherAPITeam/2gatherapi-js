@@ -76,12 +76,12 @@ class Chat extends Plugin{
                 id : "send-btn",
                 class : "send"
             },
-            buttonValue : "send",
+            buttonValue : "שלח",
             onClickFunc  : {
 
             }
         }
-        buttonSend["onClickFunc"]["func"] = this.options.onClickFunc .func;
+        buttonSend["onClickFunc"]["func"] = this.options.onClickFunc.func;
         this.buttonFactory.createObject(tgButton[0], buttonSend);
 
         this.chatUtil.initChat(wsChatServer);

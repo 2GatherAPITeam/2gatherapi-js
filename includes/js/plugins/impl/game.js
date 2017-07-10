@@ -161,7 +161,7 @@ class Game extends Plugin {
         var qElement = $('<div>', {
             id: 'question'
         });
-        var header = $('<h4>Question ' + (index + 1) + '</h4>');
+        var header = $('<h4>שאלה ' + (index + 1) + '</h4>');
         qElement.append(header);
 
         var question = $('<h3>').append(this.questions[index].question);
@@ -267,8 +267,8 @@ class Game extends Plugin {
                 numCorrect++;
             }
         }
-        score.append('You got ' + numCorrect + ' questions out of ' +
-            this.questions.length + ' right!!!');
+        score.append('ענית על ' + numCorrect + ' שאלות מתוך ' +
+            this.questions.length);
         return score;
     }
 }

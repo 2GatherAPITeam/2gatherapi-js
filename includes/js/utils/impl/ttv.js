@@ -5,7 +5,7 @@ class SpeechUtil extends Util{
     constructor() {
         super();
         if(!SpeechUtilInstance){
-            this.languages = {english:'en-US',france:'fr-FR'};
+            this.languages = {english:'en-US',france:'fr-FR',arabic:'ar-SA'};
             this.SpeechUtilInstance = this;
             // this.utterance = new SpeechSynthesisUtterance();
             this.userLanguages;

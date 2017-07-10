@@ -59,7 +59,7 @@ class ChatUtil extends Util{
                 //voice to text only what the other says
                 if(sessionStorage.getItem("utils").indexOf("ttv") != -1 ){
                     if(uname != myname){
-                        let u = new SpeechSynthesisUtterance(uname + "say" + umsg);
+                        let u = new SpeechSynthesisUtterance(uname + "said" + umsg);
                         u.lang = 'en-US';
                         let speaker = new SpeechUtil();
                         speaker.startSpeak(u);

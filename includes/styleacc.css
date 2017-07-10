@@ -54,6 +54,7 @@
     position: absolute;
     float:left;
     list-style: none;
+    z-index: 99;
 }
 .header_panel ul button{
     width: 175%;
@@ -65,7 +66,6 @@
     border: 1px solid #fff;
     color: #4682b4;
     border-radius: 8px;
-    left: -300px;
     z-index: 99;
     cursor: pointer;
 }

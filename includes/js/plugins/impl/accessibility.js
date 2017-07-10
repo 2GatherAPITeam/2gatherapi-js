@@ -122,7 +122,7 @@ class Accessibility extends Plugin{
             liAttribute : {
                 id : "hide_panel"
             },
-            buttonValue : "Close",
+            buttonValue : "x",
             commands : {
                 submit : {
 

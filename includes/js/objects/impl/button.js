@@ -52,4 +52,9 @@ class Button extends TGObject{
     enableClickers(){
 
     }
+
+    enableTobii(){
+        this.button.style.fontSize = "2em";
+        console.log("button tobi");
+    }
 }
