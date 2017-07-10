@@ -6,8 +6,15 @@
     <link rel="stylesheet" type="text/css" href="includes/style.css">
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <script src="jquery-ui.min.js"></script>
 
+    <!-- keyboard widget css & script (required) -->
+    <link href="keyboard.css" rel="stylesheet">
+    <script src="jquery.keyboard.js"></script>
+
+    <script src="keyboard-layouts-greywyvern.js" charset="utf-8"></script>
+    <link href="demo.css" rel="stylesheet">
     <!--bootstrap-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -276,7 +283,7 @@
             wsURL: "ws://ec2-54-190-53-139.us-west-2.compute.amazonaws.com:8080/index.php",
             onClickFunc: {
                 func: function () {
-                    document.getElementById('send-btn').click();
+//                    document.getElementById('send-btn').click();
                 }
             },
             commands: {

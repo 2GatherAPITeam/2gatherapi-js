@@ -17,7 +17,8 @@
     "ws": "^2.2.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-preset-env": "^1.3.2"
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-es2015": "^6.24.1"
   }
 }

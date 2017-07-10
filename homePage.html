@@ -5,8 +5,20 @@
     <!--tsamid css -->
     <link rel="stylesheet" type="text/css" href="includes/style.css">
 
-
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <script src="jquery-ui.min.js"></script>
+
+    <!-- keyboard widget css & script (required) -->
+    <link href="keyboard.css" rel="stylesheet">
+    <script src="jquery.keyboard.js"></script>
+
+    <script src="keyboard-layouts-greywyvern.js" charset="utf-8"></script>
+    <link href="demo.css" rel="stylesheet">
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 
     <!--accessibilty tool-->
     <link rel="stylesheet" title="Normal" href="includes/styleacc.css" type="text/css" />
@@ -15,6 +27,7 @@
     <script src="includes/js/third-parties/annyang/annyang.js"></script>
 
     <title>Tsamid</title>
+
     <!--2gatherAPI-->
     <script src="includes/js/2gatherapi.js"></script>
     <script src="includes/js/middleware/middleware.js"></script>
@@ -57,17 +70,17 @@
     <!--Objects-->
     <script src="includes/js/objects/object.js"></script>
     <script src="includes/js/objects/impl/inputText.js"></script>
-    <script src="includes/js/objects/impl/li.js"></script>
     <script src="includes/js/objects/impl/button.js"></script>
     <script src="includes/js/objects/impl/link.js"></script>
     <script src="includes/js/objects/impl/paragraph.js"></script>
     <script src="includes/js/objects/impl/image.js"></script>
+    <script src="includes/js/objects/impl/li.js"></script>
 
     <script src="includes/js/objects/factories/impl/buttonFactory.js"></script>
     <script src="includes/js/objects/factories/impl/linkFactory.js"></script>
-    <script src="includes/js/objects/factories/impl/liFactory.js"></script>
     <script src="includes/js/objects/factories/impl/paragraphFactory.js"></script>
     <script src="includes/js/objects/factories/impl/imgFactory.js"></script>
+    <script src="includes/js/objects/factories/impl/liFactory.js"></script>
 </head>
 <body >
 
@@ -108,7 +121,7 @@
 
             <div class="snow-globe">
                 <img src="images/games.png" alt="Games">
-                <div class="bottom"><a class="button" href="#">משחקים</a></div>
+                <div class="bottom"><a class="button" href="game.html">משחקים</a></div>
 
             </div>
 
@@ -120,7 +133,7 @@
 
             <div class="snow-globe">
                 <img src="images/zula.png" alt="Zula">
-                <div class="bottom"><a class="button" href="zula.html">חדר שיחה</a></div>
+                <div class="bottom"><a class="button" href="chat.html">חדר שיחה</a></div>
 
             </div>
         </div>
@@ -141,9 +154,7 @@
 
             <div class="snow-globe">
                 <img src="images/calendar.png" alt="Calendar">
-                <div class="bottom"><a class="button" href="#">לוח שנה</a></div>
-
-
+                <div class="bottom"><a class="button" href="eventRegistration.html">לוח שנה</a></div>
             </div>
 
         </div>
